@@ -16,10 +16,12 @@ export const FetchingStudents = (props) => {
     const [ statudentsStore, setStudents ] = useState(INTITAIL_STUDENTS)
 
     const fetchingStudents = async () => {
-        setStudents({
-            ...statudentsStore,
-            loading: false
-        })
+        setTimeout(() => {
+            setStudents({
+                ...statudentsStore,
+                loading: false
+            })
+        }, 3000)
     }
 
     useEffect(() => {
